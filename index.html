@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="./styles/main.css">
+    <title>Austin DiLeonardo</title>
+</head>
+<body>
+    <div id="theme--toggle">
+        <a id="theme--toggle--link" href="#" onclick="toggleTheme();">Toggle Light Mode</a>
+    </div>
+    <div id="container--main">
+        <section id="wrapper--hero" class="section--page">
+            <img id="profile-img" src="./assets/images/profile-image.jpg" alt="Austin's Profile Photo">
+            <div>
+                <h1 id="user-name">Austin DiLeonardo</h1>
+                <p id="bio">Senior Associate, Full-Stack Engineer at <a href="https://www.infosys.com/">Infosys Ltd.</a></p>
+                <div id="contact--list">
+                    Email:<a href="mailto:austinrd95@gmail.com">austinrd95@gmail.com</a>
+                    Phone:<a href="tel:+18456740021">(845)-674-0021</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section--page">
+            <div id="socials--list">
+                <a href="https://www.linkedin.com/in/austinrd/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/AustinRD" target="_blank" rel="noopener">GitHub</a>
+                <a href="./assets/resume.pdf" target="_blank">Download Resume</a>
+            </div>
+        </section>
+
+        <section class="section--page">
+            <h2>Skills and Qualifications</h2>
+            <ul id="qualifications--list">
+                <li>2 Years of Full-Stack Web-Development Experience</li>
+                <li>Infosys Certified Digital Accessability Associate</li>
+                <li>Experienced with training new employees</li>
+                <li>Experienced with tutoring in Computer Science subjects</li>
+            </ul>
+        </section>
+
+        <section class="section--page">
+            <h2>Tech Stacks</h2>
+
+            <div id="wrapper--techstack__items">
+                <div class="card--techstack">
+                    <span>C#, .Net Core, Entity Framework Core, TypeScript, Angular, MSSQL</span>
+                </div>
+                <div class="card--techstack">
+                    <span>HTML, CSS, jQuery, PHP, CodeIgniter, MySQL</span>
+                </div>
+                <div class="card--techstack">
+                    <span>HTML, CSS, JavaScript, PHP</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="work-history-wrapper" class="section--page">
+            <h2>Work History</h2>
+            <div class="line-break"></div>
+            <div class="card--work-history">
+                <strong>SENIOR ASSOCIATE | INFOSYS LTD.</strong>
+                <p>3/2021 - Present</p>
+                <p>Worked with a Client to deliver a full-stack upgrade to a website with the goal of connecting members of the community with volunteers who could assist with some tasks.</p>
+                <ul>
+                    <li>Delivered new features and functionality to an existing MVC web-application as a member of an Agile SCRUM team.</li>
+                    <li>Onboarded new associates to the project, and led weekly deployments to a development enviornment including peer reviews.</li>
+                    <li>Connected with stakeholders to discuss progress, and amendments to the design provided in the form of FIGMA files.</li>
+                </ul>
+            </div>
+            <div class="line-break"></div>
+            <div class="card--work-history">
+                <strong>SOFTWARE ENGINEER | MS DIVISIONS SPRING COMPANY</strong>
+                <p>5/2020 - 8/2020</p>
+                <p>Helped a local spring-manufacturer add features to their website that would allow them to gather order data, and manage their customers.</p>
+                <ul>
+                    <li>Coordinated with business owners to determine business needs and set appropriate goals in the project planning phase.</li>
+                    <li>Implemented authentication, registration, shopping cart, and checkout solutions that resulted in a secure commerce experience.</li>
+                    <li>Performed application debugging to fix pre-existing issues and those that arose during the development process.</li>
+                </ul>
+            </div>
+            <div class="line-break"></div>
+            <div class="card--work-history">
+                <strong>STUDENT INTERN | SUNY NEW PALTZ - CAREER RESOURCE CENTER</strong>
+                <p>8/2020 - 12/2020</p>
+                <p>Developed a system for custom form creation, with the ability to assign multiple participants their own sections to complete.</p>
+                <ul>
+                    <li>Took ownership and responsiblity for complete front-end redesign, which included the addition of responsive web-design</li>
+                    <li>Implemented dashboards for several user-types with varying permission levels</li>
+                    <li>Reworked the database to accommodate expanded functionality</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section--page">
+            <h2>Projects & Accomplishments</h2>
+            <div class="card--project">
+                <a href="project1.html">Personal Expense Tracker</a>
+            </div>
+            <div class="card--project">
+                <a href="project2.html">Semester Planner - For a college's engineering department</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
+<script>
+    var currentTheme = 'dark';
+    function toggleTheme() {
+        if(currentTheme == 'dark') {
+            document.documentElement.style.setProperty('--mainTextColor', 'var(--mainTextColor-light)');
+            document.documentElement.style.setProperty('--secondaryTextColor', 'var(--secondaryTextColor-light)');
+            document.documentElement.style.setProperty('--mainLinkColor', 'var(--mainLinkColor-light)');
+            document.documentElement.style.setProperty('--mainBorderColor', 'var(--mainBorderColor-light)');
+            document.documentElement.style.setProperty('--mainBgColor', 'var(--mainBgColor-light)');
+            currentTheme = 'light';
+            document.getElementById("theme--toggle--link").innerText = "Toggle Dark Mode";
+        } else {
+            document.documentElement.style.setProperty('--mainTextColor', 'var(--mainTextColor-dark)');
+            document.documentElement.style.setProperty('--secondaryTextColor', 'var(--secondaryTextColor-dark)');
+            document.documentElement.style.setProperty('--mainLinkColor', 'var(--mainLinkColor-dark)');
+            document.documentElement.style.setProperty('--mainBorderColor', 'var(--mainBorderColor-dark)');
+            document.documentElement.style.setProperty('--mainBgColor', 'var(--mainBgColor-dark)');
+            currentTheme = 'dark';
+            document.getElementById("theme--toggle--link").innerText = "Toggle Light Mode";
+        }
+    }
+</script>
+<!-- BEM Method - CSS Naming Convention -->
